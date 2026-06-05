@@ -1,0 +1,811 @@
+{
+  "collections": [
+    {
+      "id": "users",
+      "name": "users",
+      "type": "auth",
+      "system": false,
+      "schema": [
+        {
+          "system": false,
+          "id": "name",
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": 2,
+            "max": 50,
+            "pattern": ""
+          }
+        },
+        {
+          "system": false,
+          "id": "age",
+          "name": "age",
+          "type": "number",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": 18,
+            "max": 100
+          }
+        },
+        {
+          "system": false,
+          "id": "gender",
+          "name": "gender",
+          "type": "select",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "maxSelect": 1,
+            "values": ["male", "female", "other"]
+          }
+        },
+        {
+          "system": false,
+          "id": "location",
+          "name": "location",
+          "type": "text",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": 2,
+            "max": 50
+          }
+        },
+        {
+          "system": false,
+          "id": "profession",
+          "name": "profession",
+          "type": "text",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": 2,
+            "max": 50
+          }
+        },
+        {
+          "system": false,
+          "id": "education",
+          "name": "education",
+          "type": "text",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": 2,
+            "max": 50
+          }
+        },
+        {
+          "system": false,
+          "id": "bio",
+          "name": "bio",
+          "type": "text",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": 10,
+            "max": 500
+          }
+        },
+        {
+          "system": false,
+          "id": "interests",
+          "name": "interests",
+          "type": "text",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": 2,
+            "max": 100
+          }
+        },
+        {
+          "system": false,
+          "id": "goals",
+          "name": "goals",
+          "type": "select",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "maxSelect": 1,
+            "values": ["Long-term relationship", "Marriage", "Serious relationship", "Casual"]
+          }
+        },
+        {
+          "system": false,
+          "id": "community",
+          "name": "community",
+          "type": "text",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": 2,
+            "max": 50
+          }
+        },
+        {
+          "system": false,
+          "id": "photos",
+          "name": "photos",
+          "type": "file",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "maxSelect": 6,
+            "maxSize": 5242880,
+            "mimeTypes": ["image/jpeg", "image/png", "image/webp"],
+            "thumbs": ["100x100", "400x600"]
+          }
+        },
+        {
+          "system": false,
+          "id": "voice_intro",
+          "name": "voice_intro",
+          "type": "file",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "maxSelect": 1,
+            "maxSize": 10485760,
+            "mimeTypes": ["audio/mpeg", "audio/wav"]
+          }
+        },
+        {
+          "system": false,
+          "id": "video_intro",
+          "name": "video_intro",
+          "type": "file",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "maxSelect": 1,
+            "maxSize": 20971520,
+            "mimeTypes": ["video/mp4", "video/webm"]
+          }
+        },
+        {
+          "system": false,
+          "id": "verified",
+          "name": "verified",
+          "type": "bool",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {}
+        },
+        {
+          "system": false,
+          "id": "verification_level",
+          "name": "verification_level",
+          "type": "select",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "maxSelect": 1,
+            "values": ["none", "basic", "premium"]
+          }
+        },
+        {
+          "system": false,
+          "id": "premium",
+          "name": "premium",
+          "type": "bool",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {}
+        },
+        {
+          "system": false,
+          "id": "premium_expires",
+          "name": "premium_expires",
+          "type": "date",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": "",
+            "max": ""
+          }
+        },
+        {
+          "system": false,
+          "id": "online",
+          "name": "online",
+          "type": "bool",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {}
+        },
+        {
+          "system": false,
+          "id": "last_active",
+          "name": "last_active",
+          "type": "date",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": "",
+            "max": ""
+          }
+        },
+        {
+          "system": false,
+          "id": "lat",
+          "name": "lat",
+          "type": "number",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": null,
+            "max": null
+          }
+        },
+        {
+          "system": false,
+          "id": "lng",
+          "name": "lng",
+          "type": "number",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": null,
+            "max": null
+          }
+        },
+        {
+          "system": false,
+          "id": "highlights",
+          "name": "highlights",
+          "type": "text",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": 2,
+            "max": 100
+          }
+        }
+      ],
+      "indexes": [],
+      "listRule": "",
+      "viewRule": "",
+      "createRule": "",
+      "updateRule": "id = @request.auth.id",
+      "deleteRule": "id = @request.auth.id",
+      "options": {
+        "allowEmailAuth": true,
+        "allowOAuth2Auth": true,
+        "allowUsernameAuth": false,
+        "exceptEmailDomains": null,
+        "manageRule": null,
+        "minPasswordLength": 8,
+        "onlyEmailDomains": null,
+        "requireEmail": false
+      }
+    },
+    {
+      "id": "matches",
+      "name": "matches",
+      "type": "base",
+      "system": false,
+      "schema": [
+        {
+          "system": false,
+          "id": "user_a",
+          "name": "user_a",
+          "type": "relation",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "collectionId": "users",
+            "cascadeDelete": false,
+            "minSelect": 1,
+            "maxSelect": 1
+          }
+        },
+        {
+          "system": false,
+          "id": "user_b",
+          "name": "user_b",
+          "type": "relation",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "collectionId": "users",
+            "cascadeDelete": false,
+            "minSelect": 1,
+            "maxSelect": 1
+          }
+        },
+        {
+          "system": false,
+          "id": "matched_at",
+          "name": "matched_at",
+          "type": "date",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": "",
+            "max": ""
+          }
+        },
+        {
+          "system": false,
+          "id": "super_like",
+          "name": "super_like",
+          "type": "bool",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {}
+        },
+        {
+          "system": false,
+          "id": "unread_a",
+          "name": "unread_a",
+          "type": "number",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": 0,
+            "max": null
+          }
+        },
+        {
+          "system": false,
+          "id": "unread_b",
+          "name": "unread_b",
+          "type": "number",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": 0,
+            "max": null
+          }
+        }
+      ],
+      "indexes": [],
+      "listRule": "user_a = @request.auth.id || user_b = @request.auth.id",
+      "viewRule": "user_a = @request.auth.id || user_b = @request.auth.id",
+      "createRule": "",
+      "updateRule": "user_a = @request.auth.id || user_b = @request.auth.id",
+      "deleteRule": "user_a = @request.auth.id || user_b = @request.auth.id"
+    },
+    {
+      "id": "messages",
+      "name": "messages",
+      "type": "base",
+      "system": false,
+      "schema": [
+        {
+          "system": false,
+          "id": "match",
+          "name": "match",
+          "type": "relation",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "collectionId": "matches",
+            "cascadeDelete": true,
+            "minSelect": 1,
+            "maxSelect": 1
+          }
+        },
+        {
+          "system": false,
+          "id": "sender",
+          "name": "sender",
+          "type": "relation",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "collectionId": "users",
+            "cascadeDelete": false,
+            "minSelect": 1,
+            "maxSelect": 1
+          }
+        },
+        {
+          "system": false,
+          "id": "text",
+          "name": "text",
+          "type": "text",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": 1,
+            "max": 2000
+          }
+        },
+        {
+          "system": false,
+          "id": "read",
+          "name": "read",
+          "type": "bool",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {}
+        }
+      ],
+      "indexes": [],
+      "listRule": "match.user_a = @request.auth.id || match.user_b = @request.auth.id",
+      "viewRule": "match.user_a = @request.auth.id || match.user_b = @request.auth.id",
+      "createRule": "sender = @request.auth.id",
+      "updateRule": "sender = @request.auth.id",
+      "deleteRule": "sender = @request.auth.id"
+    },
+    {
+      "id": "likes",
+      "name": "likes",
+      "type": "base",
+      "system": false,
+      "schema": [
+        {
+          "system": false,
+          "id": "from_user",
+          "name": "from_user",
+          "type": "relation",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "collectionId": "users",
+            "cascadeDelete": true,
+            "minSelect": 1,
+            "maxSelect": 1
+          }
+        },
+        {
+          "system": false,
+          "id": "to_user",
+          "name": "to_user",
+          "type": "relation",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "collectionId": "users",
+            "cascadeDelete": true,
+            "minSelect": 1,
+            "maxSelect": 1
+          }
+        },
+        {
+          "system": false,
+          "id": "super_like",
+          "name": "super_like",
+          "type": "bool",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {}
+        }
+      ],
+      "indexes": [
+        "CREATE UNIQUE INDEX idx_likes_pair ON likes (from_user, to_user)"
+      ],
+      "listRule": "from_user = @request.auth.id || to_user = @request.auth.id",
+      "viewRule": "from_user = @request.auth.id || to_user = @request.auth.id",
+      "createRule": "from_user = @request.auth.id",
+      "updateRule": "from_user = @request.auth.id",
+      "deleteRule": "from_user = @request.auth.id"
+    },
+    {
+      "id": "events",
+      "name": "events",
+      "type": "base",
+      "system": false,
+      "schema": [
+        {
+          "system": false,
+          "id": "title",
+          "name": "title",
+          "type": "text",
+          "required": true,
+          "presentable": true,
+          "unique": false,
+          "options": {
+            "min": 5,
+            "max": 100
+          }
+        },
+        {
+          "system": false,
+          "id": "location",
+          "name": "location",
+          "type": "text",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": 2,
+            "max": 50
+          }
+        },
+        {
+          "system": false,
+          "id": "event_date",
+          "name": "event_date",
+          "type": "date",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": "",
+            "max": ""
+          }
+        },
+        {
+          "system": false,
+          "id": "event_time",
+          "name": "event_time",
+          "type": "text",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": 3,
+            "max": 20
+          }
+        },
+        {
+          "system": false,
+          "id": "type",
+          "name": "type",
+          "type": "select",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "maxSelect": 1,
+            "values": ["Outdoor", "Networking", "Volunteering", "Social", "Speed Dating"]
+          }
+        },
+        {
+          "system": false,
+          "id": "price",
+          "name": "price",
+          "type": "number",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": 0,
+            "max": null
+          }
+        },
+        {
+          "system": false,
+          "id": "currency",
+          "name": "currency",
+          "type": "text",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": 2,
+            "max": 10
+          }
+        },
+        {
+          "system": false,
+          "id": "max_attendees",
+          "name": "max_attendees",
+          "type": "number",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": 1,
+            "max": 1000
+          }
+        },
+        {
+          "system": false,
+          "id": "image",
+          "name": "image",
+          "type": "file",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "maxSelect": 1,
+            "maxSize": 5242880,
+            "mimeTypes": ["image/jpeg", "image/png", "image/webp"],
+            "thumbs": ["400x300"]
+          }
+        },
+        {
+          "system": false,
+          "id": "description",
+          "name": "description",
+          "type": "text",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": 10,
+            "max": 500
+          }
+        }
+      ],
+      "indexes": [],
+      "listRule": "",
+      "viewRule": "",
+      "createRule": "",
+      "updateRule": "",
+      "deleteRule": ""
+    },
+    {
+      "id": "event_attendees",
+      "name": "event_attendees",
+      "type": "base",
+      "system": false,
+      "schema": [
+        {
+          "system": false,
+          "id": "event",
+          "name": "event",
+          "type": "relation",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "collectionId": "events",
+            "cascadeDelete": true,
+            "minSelect": 1,
+            "maxSelect": 1
+          }
+        },
+        {
+          "system": false,
+          "id": "user",
+          "name": "user",
+          "type": "relation",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "collectionId": "users",
+            "cascadeDelete": true,
+            "minSelect": 1,
+            "maxSelect": 1
+          }
+        },
+        {
+          "system": false,
+          "id": "paid",
+          "name": "paid",
+          "type": "bool",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {}
+        }
+      ],
+      "indexes": [
+        "CREATE UNIQUE INDEX idx_event_user ON event_attendees (event, user)"
+      ],
+      "listRule": "",
+      "viewRule": "",
+      "createRule": "",
+      "updateRule": "",
+      "deleteRule": ""
+    },
+    {
+      "id": "reports",
+      "name": "reports",
+      "type": "base",
+      "system": false,
+      "schema": [
+        {
+          "system": false,
+          "id": "reporter",
+          "name": "reporter",
+          "type": "relation",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "collectionId": "users",
+            "cascadeDelete": true,
+            "minSelect": 1,
+            "maxSelect": 1
+          }
+        },
+        {
+          "system": false,
+          "id": "reported_user",
+          "name": "reported_user",
+          "type": "relation",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "collectionId": "users",
+            "cascadeDelete": true,
+            "minSelect": 1,
+            "maxSelect": 1
+          }
+        },
+        {
+          "system": false,
+          "id": "reason",
+          "name": "reason",
+          "type": "select",
+          "required": true,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "maxSelect": 1,
+            "values": ["Fake profile", "Harassment", "Inappropriate content", "Scam", "Other"]
+          }
+        },
+        {
+          "system": false,
+          "id": "details",
+          "name": "details",
+          "type": "text",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "min": 10,
+            "max": 1000
+          }
+        },
+        {
+          "system": false,
+          "id": "status",
+          "name": "status",
+          "type": "select",
+          "required": false,
+          "presentable": false,
+          "unique": false,
+          "options": {
+            "maxSelect": 1,
+            "values": ["pending", "reviewing", "resolved", "dismissed"]
+          }
+        }
+      ],
+      "indexes": [],
+      "listRule": "reporter = @request.auth.id",
+      "viewRule": "reporter = @request.auth.id",
+      "createRule": "reporter = @request.auth.id",
+      "updateRule": "",
+      "deleteRule": ""
+    }
+  ]
+}
