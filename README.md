@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # LinkUp - Local Dating Web App
 
 A production-ready, Telegram-based dating web application built for local communities. Features swipe-based discovery, community circles, local events, AI compatibility scoring, and M-Pesa integration.
@@ -158,7 +157,3 @@ The app is designed for mobile use:
 ## License
 
 MIT License - Built for the Tanzanian community.
-=======
-# linkup
-sociallinkup
->>>>>>> 5cdef05717ea2fa380c82bdb6c7e1eac833afb5a
